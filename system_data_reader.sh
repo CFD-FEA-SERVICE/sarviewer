@@ -102,6 +102,8 @@ howtouse(){
 		# Send today's statistics statistics by email:
 		./system_data_reader.sh -f sa$(date +%d) -m example@example.com
 
+		# Get statistics from the latest changed file:
+		./system_data_reader.sh -f $(ls -Art /var/log/sysstat/ | tail -n 1)
 	EOF
 }
 
