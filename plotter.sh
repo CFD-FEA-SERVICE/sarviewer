@@ -18,16 +18,16 @@ if [ $# -ne 0 ];then
 	echo "This script doesn't accept parameters"
 elif [ "$graph_generator" == "gnuplot" ];then
 	cd plotters/gnuplot
-	gnuplot loadaverage.gplot
-	gnuplot tasks.gplot
+	#gnuplot loadaverage.gplot
+	#gnuplot tasks.gplot
 	gnuplot cpu.gplot
 	gnuplot ram.gplot
-	gnuplot swap.gplot
-	gnuplot iotransfer.gplot
-	gnuplot proc.gplot
-	gnuplot contextsw.gplot
-	gnuplot netinterface.gplot
-	gnuplot sockets.gplot
+	#gnuplot swap.gplot
+	#gnuplot iotransfer.gplot
+	#gnuplot proc.gplot
+	#gnuplot contextsw.gplot
+	#gnuplot netinterface.gplot
+	#gnuplot sockets.gplot
 elif [ "$graph_generator" == "matplotlib" ];then
 	cd plotters/matplotlib
 	python loadaverage.py

@@ -33,17 +33,17 @@ dump_sar_info(){
 	# RAM
 	sar -r -f $sysstat_logdir/$sa_file -s $start_time -e $end_time | grep -v -E "[a-zA-Z]|^$" > data/ram.dat &
 	# Swap
-	sar -S -f $sysstat_logdir/$sa_file -s $start_time -e $end_time | grep -v -E "[a-zA-Z]|^$" > data/swap.dat &
+	#sar -S -f $sysstat_logdir/$sa_file -s $start_time -e $end_time | grep -v -E "[a-zA-Z]|^$" > data/swap.dat &
 	# Load average and tasks
-	sar -q -f $sysstat_logdir/$sa_file -s $start_time -e $end_time | grep -v -E "[a-zA-Z]|^$" > data/loadaverage.dat &
+	#sar -q -f $sysstat_logdir/$sa_file -s $start_time -e $end_time | grep -v -E "[a-zA-Z]|^$" > data/loadaverage.dat &
 	# IO transfer
-	sar -b -f $sysstat_logdir/$sa_file -s $start_time -e $end_time | grep -v -E "[a-zA-Z]|^$" > data/iotransfer.dat &
+	#sar -b -f $sysstat_logdir/$sa_file -s $start_time -e $end_time | grep -v -E "[a-zA-Z]|^$" > data/iotransfer.dat &
 	# Process/context switches
-	sar -w -f $sysstat_logdir/$sa_file -s $start_time -e $end_time | grep -v -E "[a-zA-Z]|^$" > data/proc.dat &
+	#sar -w -f $sysstat_logdir/$sa_file -s $start_time -e $end_time | grep -v -E "[a-zA-Z]|^$" > data/proc.dat &
 	# Network Interface
-	sar -n DEV -f $sysstat_logdir/$sa_file -s $start_time -e $end_time | grep $network_interface | grep -v "Average" > data/netinterface.dat &
+	#sar -n DEV -f $sysstat_logdir/$sa_file -s $start_time -e $end_time | grep $network_interface | grep -v "Average" > data/netinterface.dat &
 	# Sockets
-	sar -n SOCK -f $sysstat_logdir/$sa_file -s $start_time -e $end_time | grep -v -E "[a-zA-Z]|^$" > data/sockets.dat &
+	#sar -n SOCK -f $sysstat_logdir/$sa_file -s $start_time -e $end_time | grep -v -E "[a-zA-Z]|^$" > data/sockets.dat &
 
     wait
 }
