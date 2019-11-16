@@ -15,7 +15,7 @@
 
 # Initialize in sarviewer folder
 cd $(dirname $0)
-
+LC_ALL="C.UTF-8"
 # ======================
 # VARIABLES
 # ======================
