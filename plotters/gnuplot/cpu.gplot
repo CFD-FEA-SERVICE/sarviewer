@@ -39,6 +39,6 @@ set style line 11 lc rgb '#aeb6bf' lt 0 lw 2
 set grid back ls 11
 
 # Begin plotting
-plot '../../data/cpu.dat' using 1:4 title 'User%' with l ls 1, \
-     ''                   using 1:6 title 'System%' with l ls 2, \
-     ''                   using 1:9 title 'Idle%' with l ls 3
+plot '../../data/cpu.dat' using 1:3 title 'User%' with l ls 1, \
+     ''                   using 1:5 title 'System%' with l ls 2, \
+     ''                   using 1:8 title 'Idle%' with l ls 3
